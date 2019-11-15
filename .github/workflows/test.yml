@@ -7,6 +7,9 @@ jobs:
       image: ruby:2.6.5
     steps:
     - uses: actions/checkout@v1
+    - name: Install required package
+      run: |
+        sudo apt-get install libmysqlclient-dev libpq-dev libsqlite3-dev libncurses5-dev
     - name: Set up node and yarn
       run: |
         curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
