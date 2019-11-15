@@ -16,5 +16,5 @@ jobs:
     - name: Build and setup
       run: |
         bundle -j 4
-        bin/rails yarn:install db:setup assets:precompile
+        bin/rails setup
         bin/rails test
