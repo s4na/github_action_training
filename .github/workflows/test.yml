@@ -17,10 +17,10 @@ jobs:
       run: |
         bundle -j 4
         bin/setup
-    - name: rubocop
+    - name: Rubocop
       run: |
-        lastexitcode = (bundle exec rubocop -c .rubocop.ymlz)
+        bundle exec rubocop -c .rubocop.ymlz
         if（$ lastexitcode  -lt  8）{ $ global：lastexitcode  =  0 }
-    - name: test
+    - name: Test
       run: |
         bin/rails test
