@@ -19,8 +19,7 @@ jobs:
         bin/setup
     - name: Rubocop
       run: |
-        bundle exec rubocop -c .rubocop.ymlz
-        if（$ lastexitcode  -lt  8）{ $ global：lastexitcode  =  0 }
+        bundle exec rubocop --parallel
     - name: Test
       run: |
         bin/rails test
