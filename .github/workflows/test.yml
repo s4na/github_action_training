@@ -18,7 +18,7 @@ jobs:
         bundle -j 4
         bin/rails setup
     - name: rubocop
-      - run: |
+      run: |
         bundle exec rubocop -c .rubocop.yml
     - name: test
       run: |
